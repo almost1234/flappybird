@@ -29,7 +29,7 @@ public class PipieTop : MonoBehaviour
         }
         if (transform.localPosition.x < 13.2f && scoreGiven == false)
         {
-            gameScore = idksomename.Something();
+            gameScore = idksomename.ScoreGet();
             scoreGiven = true;
             Debug.Log(gameScore);
         }
