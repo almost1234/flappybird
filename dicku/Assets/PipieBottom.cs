@@ -6,7 +6,7 @@ public class PipieBottom : MonoBehaviour
 {
     private bool scoreGiven;
     private int gameScore;
-    private DickBird idksomename;
+    private DickBird playerScript;
     public Transform topPipe;
     public Transform bottomPipe;
     private float numberHolder;
@@ -16,14 +16,14 @@ public class PipieBottom : MonoBehaviour
 
     private void Start()
     {
-        idksomename = FindObjectOfType<DickBird>();
+        playerScript = FindObjectOfType<DickBird>();
 
 
     }
 
     // Update is called once per frame
     void FixedUpdate()
-    {   
+    {
         topPipe.Translate(new Vector3(-1, 0, 0) * Time.deltaTime);
         bottomPipe.Translate(new Vector3(-1, 0, 0) * Time.deltaTime);
         if (topPipe.localPosition.x < -17.5f)
@@ -36,7 +36,7 @@ public class PipieBottom : MonoBehaviour
 
         if (topPipe.localPosition.x < -10.0f && scoreGiven == false)
         {
-            gameScore = idksomename.Something();
+            gameScore = playerScript.ScoreGet();
             scoreGiven = true;
             Debug.Log(gameScore);
         }

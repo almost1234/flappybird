@@ -15,7 +15,7 @@ public class Movement : MonoBehaviour
     void FixedUpdate()
     {
         transform.Translate(new Vector3(-1, 0, 0) * Time.deltaTime);
-        if (transform.localPosition.x < -9.5f)
+        if (transform.localPosition.x < -9.8f)
         {
             transform.SetPositionAndRotation(new Vector3(9.5f, 0, 0), Quaternion.Euler(new Vector3(0, 0, 0)));
 
